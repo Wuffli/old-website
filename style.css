@@ -44,9 +44,18 @@ body {
 .hero h1 {
   text-transform: uppercase;
   position: absolute;
-  top: 25%;
-  left: 10%;
-  font-size: 100px;
+  top: 20vw;
+  left: 10vw;
+  font-size: 5vw;
+  z-index: 1;
+}
+
+.hero p {
+  text-transform: uppercase;
+  position: absolute;
+  top: 15vw;
+  left: 10.5vw;
+  font-size: 2vw;
   z-index: 1;
 }
 
@@ -57,14 +66,14 @@ body {
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .18em; /* Adjust as needed */
   animation:
-    typing 2s steps(12, end),
+    typing 2s steps(24, end),
     blink-caret 1.2s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 925px }
+  to { width: 50vw }
 }
 
 /* The typewriter cursor effect */
@@ -79,8 +88,8 @@ span {
 
 .hero img {
   position: relative;
-  max-width: 60%;
-  left: 60%;
-  top: -400px;
+  max-width: 60vw;
+  left: 60vw;
+  top: -20vw;
   z-index: 0;
 }
