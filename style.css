@@ -4,6 +4,8 @@ body {
   font-family: "PT Mono", sans-serif;
 }
 
+
+
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
@@ -51,7 +53,6 @@ body {
 }
 
 .hero p {
-  text-transform: uppercase;
   position: absolute;
   top: 15vw;
   left: 10.5vw;
