@@ -2,8 +2,12 @@ body {
   background-color: #000000;
   color: white;
   font-family: "PT Mono", sans-serif;
+  overflow-x: hidden;
 }
 
+span {
+  color: yellow;
+}
 
 
 /* Style the top navigation bar */
@@ -46,7 +50,7 @@ body {
 .hero h1 {
   text-transform: uppercase;
   position: absolute;
-  top: 20vw;
+  bottom: 50vh;
   left: 10vw;
   font-size: 5vw;
   z-index: 1;
@@ -54,12 +58,19 @@ body {
 
 .hero p {
   position: absolute;
-  top: 15vw;
+  bottom: 60vh;
   left: 10.5vw;
   font-size: 2vw;
   z-index: 1;
 }
 
+.hero img {
+  position: relative;
+  max-height: 140vh;
+  right: -40vw;
+  top: -20vh;
+  z-index: 0;
+}
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid white; /* The typwriter cursor */
@@ -68,7 +79,7 @@ body {
   letter-spacing: .18em; /* Adjust as needed */
   animation:
     typing 2s steps(24, end),
-    blink-caret 1.2s step-end infinite;
+    blink-caret .9s step-end infinite;
 }
 
 /* The typing effect */
@@ -83,14 +94,17 @@ body {
   50% { border-color: white; }
 }
 
-span {
-  color: yellow;
+
+
+
+.Introduction {
+  position: absolute;
+  top: 100vh;
+  z-index: 1;
+  left: 10vw;
 }
 
-.hero img {
-  position: relative;
-  max-width: 60vw;
-  left: 60vw;
-  top: -20vw;
-  z-index: 0;
+.Introduction div {
+  width: 40vw;
+  min-width: 300px;
 }
