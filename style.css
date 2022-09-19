@@ -50,7 +50,7 @@ span {
 .hero h1 {
   text-transform: uppercase;
   position: absolute;
-  bottom: 50vh;
+  top: calc(40vh + 0px);
   left: 10vw;
   font-size: 5vw;
   z-index: 1;
@@ -67,7 +67,7 @@ span {
 .hero img {
   position: relative;
   max-height: 140vh;
-  right: -40vw;
+  right: -50vw;
   top: -20vh;
   z-index: 0;
 }
@@ -105,6 +105,21 @@ span {
 }
 
 .Introduction div {
-  width: 40vw;
+  width: 38vw;
   min-width: 300px;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.bottomdiv {
+  min-height: 25vh;
 }
