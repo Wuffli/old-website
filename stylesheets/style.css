@@ -67,7 +67,8 @@ span {
 .hero img {
   position: relative;
   max-height: 140vh;
-  right: -50vw;
+  right: -30vw;
+  margin-left: 300px;
   top: -20vh;
   z-index: 0;
 }
@@ -98,15 +99,16 @@ span {
 
 
 .Introduction {
-  position: absolute;
-  top: 100vh;
+  position: relative;
+  top: -50vh;
   z-index: 1;
   left: 10vw;
 }
 
 .Introduction div {
-  width: 38vw;
+  width: 80vw;
   min-width: 300px;
+  max-width: 750px;
 }
 
 .reveal{
@@ -121,5 +123,36 @@ span {
 }
 
 .bottomdiv {
+  position: relative;
   min-height: 25vh;
+  top: 20vh;
+}
+
+.Projects {
+  position: relative;
+  top: -20vh;
+  z-index: 1;
+  left: 10vw;
+  right: auto;
+  width: auto;
+  min-height: 25vh;
+}
+
+.Projects h2 {
+  text-align: left;
+}
+.Projects p {
+  text-align: left;
+  width: 80vw;
+  min-width: 300px;
+  max-width: 750px;
+}
+
+.height1 {
+  position: absolute;
+  top: 70vh;
+}
+.height2 {
+  position: absolute;
+  top: 135vh;
 }
