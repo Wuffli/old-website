@@ -61,8 +61,32 @@
   </section>
 
 
-  <div class="bottomdiv">
-    <h1></h1>
+
+
+
+
+  <div class="container" id="Contact">
+   <form action="https://getform.io/f/0fc94c14-6a7c-4129-9330-416d33d786db" method="POST">
+
+     <label for="name">Name</label>
+     <input type="text" id="name" name="name" placeholder="Your name..">
+
+     <label for="email">Email</label>
+     <input type="email" id="email" name="email" placeholder="Your Email..">
+
+     <label for="pronouns">Pronomen</label>
+     <select id="pronouns" name="pronouns">
+       <option value="Sie/Ihr">Sie/Ihr</option>
+       <option value="Er/Ihm">Er/Ihm</option>
+       <option value="Andere">Andere [Bitte unten bei der Nachricht spezifizieren.]</option>
+     </select>
+
+     <label for="subject">Nachricht</label>
+     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+     <input type="submit" value="Submit">
+
+   </form>
   </div>
 
  <script src="script/script.js"></script>
