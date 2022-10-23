@@ -94,7 +94,7 @@ header {
 
 @media screen and (max-width: 750px) {
   header {
-    background-color: black;
+    background-color: transparent;
   }
 
   .topnav {
@@ -107,7 +107,73 @@ header {
 }
 
 footer {
-  background-color: #252525;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1em 1fr 1fr 1fr 1em;
+    grid-gap: 2em;
+    grid-template-areas:
+     "..... logo links socials .....";
+  }
+  
+  footer {
+    background-color: #252525;
+
+  }
+
+  .logo { grid-area: logo;}
+
+  .links { grid-area: links;}
+
+  .socials { grid-area: socials;}
+
+  .logo {
+    align-content: center;
+  }
+
+  .logo img {
+    width: 15vw;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .links {
+    align-self: center;
+  }
+
+  .links a {
+    display: block;
+    color: #f2f2f2;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .links a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .socials {
+    align-self: center;
+  }
+
+  .socials a {
+    display: block;
+    color: #f2f2f2;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .socials a:hover {
+    background-color: #ddd;
+    color: black;
+  }
 }
 
 .moon {
