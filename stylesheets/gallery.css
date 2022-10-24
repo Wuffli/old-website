@@ -1,0 +1,57 @@
+.dynamic-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+}
+
+.art { grid-area: art;}
+.digital-art { grid-area: digital-art;}
+.photography { grid-area: photography;}
+
+.art {
+    aspect-ratio: 1.618 / 1;
+}
+
+.art div { 
+    background-image: url("../gallery/images/");
+}
+
+.digital-art {
+    aspect-ratio: 1.618 / 1;
+}
+
+.digital-art div { 
+    background-image: url("../gallery/images/");
+    
+}
+
+.photography { 
+    aspect-ratio: 1 / 1.618;
+}
+
+.photography div.bg { 
+    background-image: url("../gallery/images/Maturreise-Svenja-001.jpg");
+}
+
+div.bg {
+    background-size: cover;
+    background-position: center;
+    opacity: 60%;
+    width: 100%;
+    height: 100%;
+    margin-top: -4rem;
+    
+}
+h1 {
+    text-align: center;
+}
+.test {
+    
+}
+
+.dynamic-gallery {
+    grid-template-areas:
+     "art"
+     "digital-art"
+     "photography";
+}
