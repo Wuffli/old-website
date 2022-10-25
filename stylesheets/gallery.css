@@ -1,57 +1,117 @@
+body {
+    background: rgb(1,0,17);
+    background: linear-gradient(40deg, rgba(1,0,17,1) 0%, rgba(11,30,33,1) 100%); 
+}
+
 .dynamic-gallery {
     display: grid;
     grid-template-columns: 1fr;
     align-content: center;
+    min-height: calc(100vh - 3em);
+    grid-row-gap: 2em;
+    grid-column-gap: 2.828em;
 }
 
-.art { grid-area: art;}
-.digital-art { grid-area: digital-art;}
-.photography { grid-area: photography;}
+:root {
+    --dynamic-gallery-width: clamp( 600px, 75vw, 1080px);
+  }
+  
 
-.art {
-    aspect-ratio: 1.618 / 1;
+.art { 
+    grid-area: art;
+    aspect-ratio: 1.414 / 1;
 }
 
-.art div { 
+.art div.bg {
     background-image: url("../gallery/images/");
 }
 
-.digital-art {
-    aspect-ratio: 1.618 / 1;
+.digital-art { 
+    grid-area: digital-art;
+    aspect-ratio: 1.414 / 1;
 }
 
-.digital-art div { 
-    background-image: url("../gallery/images/");
-    
+.digital-art div.bg {
+    background-image: url("../gallery/images/d001-Lockscreen.png");
 }
 
 .photography { 
-    aspect-ratio: 1 / 1.618;
+    grid-area: photography;
+    aspect-ratio: 1 / 1.414 ;
 }
 
-.photography div.bg { 
-    background-image: url("../gallery/images/Maturreise-Svenja-001.jpg");
-}
-
-div.bg {
-    background-size: cover;
-    background-position: center;
-    opacity: 60%;
-    width: 100%;
-    height: 100%;
-    margin-top: -4rem;
-    
-}
-h1 {
-    text-align: center;
-}
-.test {
-    
+.photography div.bg {
+    background-image: url("../gallery/images/p001-Maturreise-Svenja.jpg");
 }
 
 .dynamic-gallery {
     grid-template-areas:
      "art"
-     "digital-art"
-     "photography";
+     "photography"
+     "digital-art";
+}
+
+h1.gallery {
+    text-align: center;
+    font-size: clamp(2rem, 7vw, 7rem);
+}
+
+.title {
+    position: absolute;
+    width: calc(100vw - 3em);
+}
+
+.digital-art div.title, .art div.title {
+    margin-top: calc((100vw - 3em) / 3.236 - 2.5rem);
+}
+
+.photography div.title {
+    margin-top: calc((100vw - 3em) * 0.809 - 2.5rem);
+}
+
+.bg {
+ width: 100%;
+ height: 100%;
+ background-size: cover;
+ background-position: center;
+ opacity: 30%;
+}
+
+@media screen and (min-width: 768px) {
+    .dynamic-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+         "art photography"
+         "digital-art photography";
+        aspect-ratio: 1.414 / 1;
+        max-width: var(--dynamic-gallery-width);
+        margin: auto;
+    }
+
+    h1.gallery {
+        font-size: clamp(2rem, 3vw, 7rem);
+    }
+
+    .digital-art, .art, .title {
+        width: calc((var(--dynamic-gallery-width) -2.828em) / 2);
+    }
+
+    .photography div.bg {
+        width: calc((var(--dynamic-gallery-width) +2.828em) / 2);
+    }
+
+    .digital-art div.title, .art div.title {
+        margin-top: calc(var(--dynamic-gallery-width) / 8);
+    }
+    
+    .photography div.title {
+        margin-top: calc(var(--dynamic-gallery-width) / 3.7);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dynamic-gallery {
+        margin-top: 40vh;
+        margin-bottom: 40vh;
+    }
 }
