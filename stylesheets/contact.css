@@ -33,4 +33,10 @@ input[type=submit]:hover {
     z-index: 9;
     height: auto;
     position: relative;
+    min-height: calc(100vh - 3em);
+}
+
+form {
+    display: block;
+    align-self: center center;
 }
