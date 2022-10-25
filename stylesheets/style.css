@@ -26,11 +26,25 @@ body {
   font-size: 1rem;
 }
 
-header {
-  background-color: #252525;
-  height: 3em;
-  z-index: 10;
+.skip-to-content-link {
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
 }
+
+.skip-to-content-link:focus {
+  transform: translateY(0%);
+}
+
+.skip-to-content-link {
+  left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+}
+
 
 .topnav {
   top: 0;
@@ -174,99 +188,4 @@ footer {
     background-color: #ddd;
     color: black;
   }
-}
-
-.moon {
-  background-image: url("../images/The_Moon_Luc_Viatour.jpg");
-  background-size: auto 120vh;
-  background-repeat: no-repeat;
-  background-position-y: -10vh;
-  background-position-x: 55vw;
-}
-
-.hero {
-  display: inherit;
-  min-width: 100wv;
-  min-height: calc(100vh - 3em);
-}
-
-.hero h1 {
-  text-transform: uppercase;
-  position: absolute;
-  top: calc(40vh + 0px);
-  left: 10vw;
-  font-size: clamp(2rem, 7vw, 7rem);
-}
-
-.hero span {
-  color: yellow;
-}
-
-.hero h2 {
-  position: absolute;
-  bottom: 60vh;
-  left: 10.5vw;
-  font-size: clamp(1rem, 2vw, 4rem);
-}
-
-.introduction {
-  display: grid;
-  justify-content: center;
-  align-items: end;
-}
-
-.introduction div, img {
-  display: block;
-  width: 100%;
-  align-self: center;
-}
-.introduction img {
-  width: 100%;
-  max-height: 80vh;
-  max-width: 80vh;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (min-width: 1000px) {
-  .introduction {
-    grid-template-columns: 1fr 2em 1fr;
-    grid-template-areas: 
-      "intro-img ... intro-text";
-  }
-
-  .intro-img{ grid-area: intro-img;}
-
-  .intro-text{ grid-area: intro-text;}
-}
-
-.project {
-  padding-top: 10vw;
-  padding-bottom: 10vw;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2em;
-}
-
-.project-grid iframe {
-  display: block;
-  border: none;
-  width: 100%;
-}
-
-@media screen and (min-width: 1000px) {
-  .project-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-      "itch-box1 itch-box2"
-      "itch-box3 itch-box4";
-  }
-
-  .itch-box1 { grid-area: itch-box1;}
-  .itch-box2 { grid-area: itch-box2;}
-  .itch-box3 { grid-area: itch-box3;}
-  .itch-box4 { grid-area: itch-box4;}
 }
