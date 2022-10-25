@@ -8,8 +8,6 @@ body {
     grid-template-columns: 1fr;
     align-content: center;
     min-height: calc(100vh - 3em);
-    grid-row-gap: 2em;
-    grid-column-gap: 2.828em;
 }
 
 :root {
@@ -23,7 +21,7 @@ body {
 }
 
 .art div.bg {
-    background-image: url("../gallery/images/");
+    background-image: url("../gallery/images/a001-cartography.jpg");
 }
 
 .digital-art { 
@@ -41,7 +39,7 @@ body {
 }
 
 .photography div.bg {
-    background-image: url("../gallery/images/p001-Maturreise-Svenja.jpg");
+    background-image: url("../gallery/images/p001_Maturreise-01-Tram.jpg");
 }
 
 .dynamic-gallery {
@@ -77,6 +75,8 @@ h1.gallery {
  opacity: 30%;
 }
 
+
+
 @media screen and (min-width: 768px) {
     .dynamic-gallery {
         grid-template-columns: 1fr 1fr;
@@ -92,12 +92,8 @@ h1.gallery {
         font-size: clamp(2rem, 3vw, 7rem);
     }
 
-    .digital-art, .art, .title {
-        width: calc((var(--dynamic-gallery-width) -2.828em) / 2);
-    }
-
     .photography div.bg {
-        width: calc((var(--dynamic-gallery-width) +2.828em) / 2);
+        width: calc((var(--dynamic-gallery-width) +2.828em));
     }
 
     .digital-art div.title, .art div.title {
@@ -107,11 +103,39 @@ h1.gallery {
     .photography div.title {
         margin-top: calc(var(--dynamic-gallery-width) / 3.7);
     }
+
+    div.title {
+        width: calc(var(--dynamic-gallery-width) / 2  );
+    }
+
+    div.title h1 {
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .bg {
+        opacity: 100%;
+        z-index: 2;
+    }
+
+    div.art:hover div.bg, div.photography:hover div.bg, div.digital-art:hover div.bg {
+        opacity: 30%;
+    }
+
+    div.art div.title, div.photography div.title, div.digital-art div.title {
+        display: none;
+    }
+
+    div.art:hover div.title, div.photography:hover div.title, div.digital-art:hover div.title {
+        display: flex;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
     .dynamic-gallery {
-        margin-top: 40vh;
+        margin-top: 30vh;
         margin-bottom: 40vh;
     }
 }
