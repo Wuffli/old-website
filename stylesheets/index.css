@@ -41,10 +41,7 @@
     top: calc(40vh + 0px);
     left: 10vw;
     font-size: clamp(2rem, 7vw, 7rem);
-  }
-  
-  .hero span {
-    color: yellow;
+    font-weight: 900;
   }
   
   .hero h2 {
